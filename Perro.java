@@ -1,27 +1,39 @@
 // Esto es un comentario
 // No son compilados
 // El nombre del objeto es Perro
-public class Perro{
 
-	// Las clases (objeto) tienen dos partes
-	// Atributos o características
-	// Métodos o acciones
+/*
+	Esto es un comentario
+	de varias 
+	líneas
+*/
 
+public class Perro {
 
-	// Estos son los atributos de clase
+	// Las clases (objeto) tienen dos secciones principales:
+	// 1. Atributos o características
+	// 2. Métodos o acciones
+
+	// Atributos (sustantivos)
+	// Para definir un atributo necesitamos:
+	// Declarar un valor privado
+	// Declarar el tipo de dato (entero, real, hilera, objetos, etc)
+	// Definir un nombre para la variable (usando camelCase)
+	// ;
 	private String nombre;
 	private String raza;
 	private int edad;
 	private String estado;
 
 
-	// Acciones o métodos
+	// Métodos
+	// Son acciones (verbos)
+	// Declarar accesibilidad -> public,  private (si se puede acceder desde la instancia)
+	// Tipo de retorno (el valor que queremos devolver luego del procesamiento)
+	// Nombre del metodo (en camelCase)
+	// Parametro (que necesita para poder funcionar)
 
-	/*
-	Comentario
-	de varias 
-	líneas
-	*/
+
 
 
 	/*
