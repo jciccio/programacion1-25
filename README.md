@@ -1,8 +1,8 @@
 # programacion1-25
 
-| Tamaño del repositorio        | Hits           | Lenguaje utilizado|
-| ------------- |:-------------:| :-------------:| 
-| ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/jciccio/programacion1-25.svg?style=for-the-badge)      | [![HitCount](http://hits.dwyl.com/jciccio/programacion1-25.svg)](http://hits.dwyl.com/jciccio/programacion1-25) | Java|
+| Tamaño del repositorio        | Lenguaje utilizado|
+| ------------- | :-------------:| 
+| ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/jciccio/programacion1-25.svg?style=for-the-badge)      |   Java|
 
 
 ## Material visto en clase
