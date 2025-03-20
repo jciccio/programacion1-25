@@ -4,7 +4,6 @@
 | ------------- |:-------------:| :-------------:| 
 | ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/jciccio/programacion1-25.svg?style=for-the-badge)      | [![HitCount](http://hits.dwyl.com/jciccio/programacion1-25.svg)](http://hits.dwyl.com/jciccio/programacion1-25) | Java|
 
-![social](https://img.shields.io/twitter/follow/joseacco12?style=social)
 
 ## Material visto en clase
 Ejemplos tomados del código fuente generado en las distintas lecciones.
