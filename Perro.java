@@ -48,7 +48,7 @@ public class Perro {
 		System.out.println("Hola soy " + nombre + " tengo " + edad + " anyos y soy un " + raza + "\n y estoy " + estado);
 	}
 
-
+	
 	public void bautizar(String nombreDelPerro){
 		nombre = nombreDelPerro;
 	}
