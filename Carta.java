@@ -28,9 +28,6 @@ public class Carta{
 		this.palo = palo;
 	}
 
-
-
-
 	public void setNumero(int numero){
 		this.numero = numero;
 	}
