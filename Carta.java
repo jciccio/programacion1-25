@@ -10,9 +10,81 @@ Carta
 + imprimir()
 */
 
+// 1..13 => 11 -> J 12-> Q 13 -> K 1-> As
+
 public class Carta{
 	private int numero;
 	private String palo;
+
+	private String convertirNumero(){
+		String numeroString = "";
+		switch(numero){
+			case 11:
+				numeroString = "J";
+			break;
+			case 12:
+				numeroString = "Q";
+			break;
+			case 13:
+				numeroString = "K";
+			break;
+			case 1:
+				numeroString = "As";
+			break;
+			default:
+				numeroString += numero;
+		}
+		return numeroString;
+	}
+
+	private String convertirNumeroIf(){
+		String numeroString = "";
+		if(numero == 11){ // = ==
+			// Lo que quiero que se ejecute
+			numeroString = "J";
+		}
+		else{
+			if(numero == 12){
+				numeroString = "Q";
+			}
+			else{
+				if(numero == 13){
+					numeroString = "K";
+				}
+				else{
+					if(numero == 1){
+						numeroString = "As";
+					}
+					else{
+						numeroString += numero; 
+					}
+				}
+			}
+		}
+		return numeroString;
+	}
+
+	private String convertirNumeroIf2(){
+		String numeroString = "";
+		if(numero == 11){ // = ==
+			// Lo que quiero que se ejecute
+			numeroString = "J";
+		}
+		else if(numero == 12){
+			numeroString = "Q";
+		}
+		else if(numero == 13){
+			numeroString = "K";
+		}
+		else if(numero == 1){
+			numeroString = "As";
+		}
+		else{
+			numeroString += numero; 
+		}
+		
+		return numeroString;
+	}
 
 
 	// Constructor de clase
@@ -24,12 +96,16 @@ public class Carta{
 
 
 	public Carta(int numero, String palo){
-		this.numero = numero;
+		if(numero >= 1 && numero <=13){
+			this.numero = numero;
+		}
 		this.palo = palo;
 	}
 
 	public void setNumero(int numero){
-		this.numero = numero;
+		if(numero > 0 && numero < 14){
+			this.numero = numero;	
+		}
 	}
 
 	public void setPalo(String palo){
@@ -45,6 +121,12 @@ public class Carta{
 	}
 
 	public void imprimir(){
-		System.out.println( numero + " de " + palo);
+		System.out.println( convertirNumero() + " de " + palo);
 	}
+
+	public void imprimirIf(){
+		System.out.println( convertirNumeroIf() + " de " + palo);
+	}
+
+	
 }
