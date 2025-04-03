@@ -1,21 +1,38 @@
 public class Mazo{
 	
-	private Carta carta1;
-	private Carta carta2;
-	private Carta carta3;
+
+	private String obtenerPalo(int i){
+		String palo = "";
+		switch(i){
+		case 0:
+			palo = "Treboles";
+			break;
+		case 1:
+			palo = "Corazones";
+			break;
+		case 2:
+			palo = "Espadas";
+			break;
+		case 3:
+			palo = "Diamantes";
+			break;
+		}
+		return palo;
+	}
 
 
 	public Mazo(){
-		carta1 = new Carta();
-		carta2 = new Carta(8, "Corazones");
-		carta3 = new Carta();
-		carta3.setPalo("Diamantes");
-		carta3.setNumero(2);
+		
+		for(int palo = 0; palo <4 ; palo++){
+			for(int i = 0; i < 13; i++){
+				Carta carta = new Carta(i+1, obtenerPalo(palo));
+				carta.imprimir();
+			}
+		}
+		
 	}
 
 	public void imprimir(){
-		carta1.imprimir();
-		carta2.imprimir();
-		carta3.imprimir();
+	
 	}
 }
