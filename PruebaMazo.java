@@ -3,6 +3,14 @@ public class PruebaMazo{
 
 		Mazo mazo = new Mazo();
 		mazo.imprimir();	
+
+		System.out.println("Fin de la impresion -  - - - - - - -  -- ");
+
+		mazo.revolver();
+		mazo.imprimir();
+
+		//int aleatorio = (int)(Math.random() * 52); //[0,1[
+		//System.out.println(aleatorio);
 	}
 
 }
