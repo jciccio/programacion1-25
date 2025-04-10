@@ -1,0 +1,335 @@
+\chapter{programacion1-\/25}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{programacion1-\/25@{programacion1-\/25}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tamaño del repositorio   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Lenguaje utilizado    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tamaño del repositorio   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Lenguaje utilizado    }\\\cline{1-2}
+\endhead
+   &\PBS\centering Java   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Material visto en clase}{Material visto en clase}}\label{md__r_e_a_d_m_e_autotoc_md1}
+Ejemplos tomados del código fuente generado en las distintas lecciones.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{\texorpdfstring{Comentarios}{Comentarios}}\label{md__r_e_a_d_m_e_autotoc_md2}
+Elementos omitidos por el compilador a la hora de transformar el código fuente en código binario/ejecutable. Utilizado por el programador para comprender mejor qué se está codificando
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Esto\ es\ un\ comentario\ de\ una\ línea\ debe\ iniciar\ con\ (//),\ toda\ la\ línea\ es\ omitida}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{/*\ Esto\ es\ un\ comentario}}
+\DoxyCodeLine{\textcolor{comment}{\ \ de\ varias\ líneas\ se\ note\ los\ delimitadores\ utilizados\ al\ inicio}}
+\DoxyCodeLine{\textcolor{comment}{\ \ y\ final\ }}
+\DoxyCodeLine{\textcolor{comment}{*/}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{\texorpdfstring{Creación de objetos}{Creación de objetos}}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Creación de clases (class) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_carta}{Carta}}\ \textcolor{comment}{//Declaración\ de\ una\ clase,\ usando\ las\ palabra\ resevadas\ public\ class}}
+
+\end{DoxyCode}
+
+\item Creación de variables de instancia o atributos de clase 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Atributos}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Para\ definir\ un\ tipo\ de\ dato:}}
+\DoxyCodeLine{\textcolor{comment}{//\ Declaramos\ el\ valor\ privado}}
+\DoxyCodeLine{\textcolor{comment}{//\ Definimos\ qué\ tipo\ de\ dato\ es}}
+\DoxyCodeLine{\textcolor{comment}{//\ Damos\ un\ nombre\ a\ la\ variable}}
+\DoxyCodeLine{\textcolor{keyword}{private}\ String\ nombre;}
+
+\end{DoxyCode}
+
+\item Creación de métodos de un objeto 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//Declaracion\ de\ un\ método:}}
+\DoxyCodeLine{\textcolor{comment}{//1.\ Si\ es\ publico\ o\ privado\ (accesible\ desde\ la\ instancia)}}
+\DoxyCodeLine{\textcolor{comment}{//2.\ Qué\ (tipo\ de\ dato)\ quiero\ que\ retorne\ el\ método\ \ }}
+\DoxyCodeLine{\textcolor{comment}{//3.\ Cómo\ se\ llama\ el\ método}}
+\DoxyCodeLine{\textcolor{comment}{//4.\ Qué\ necesito\ que\ reciba\ el\ método\ para\ funcionar}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ setPalo(String\ paloParametro)\{}
+\DoxyCodeLine{\ \ \ palo\ =\ paloParametro;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\item Generación de instancias (declaración e inicialización de objetos o tipos no primitivos) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ NombreDeClase\ nombreInstancia\ =\ new\ NombreClase();}}
+\DoxyCodeLine{Persona\ persona1\ =\ \textcolor{keyword}{new}\ Persona();}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{\texorpdfstring{Transformación de tipos de datos utilizando {\bfseries{Casting}}}{Transformación de tipos de datos utilizando {\bfseries{Casting}}}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float(),\ double(),\ int(),\ +}
+
+\end{DoxyCode}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Método   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Descripción   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Ejemplo    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Método   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Descripción   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Ejemplo    }\\\cline{1-3}
+\endhead
+double()   &\PBS\centering Conversión a número real   &\PBS\centering float(12) -\/-\/\texorpdfstring{$>$}{>} 12.\+0    \\\cline{1-3}
+int()   &\PBS\centering Conversión a número entero   &\PBS\centering int(12.\+4) -\/-\/\texorpdfstring{$>$}{>} 12    \\\cline{1-3}
++   &\PBS\centering Conversión a hilera de caracteres   &\PBS\centering "{}"{} + 12 -\/-\/\texorpdfstring{$>$}{>} "{}12"{}   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Conversión de String a números\+:}{Conversión de String a números\+:}}\label{md__r_e_a_d_m_e_autotoc_md5}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Método   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Descripción   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Ejemplo    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Método   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Descripción   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Ejemplo    }\\\cline{1-3}
+\endhead
+Double.\+parse\+Double(hilera)   &\PBS\centering Conversión a número real   &\PBS\centering Double.\+parse\+Double("{}12.\+4"{}) -\/-\/\texorpdfstring{$>$}{>} 12.\+4    \\\cline{1-3}
+Integer.\+parse\+Int(hilera)   &\PBS\centering Conversión a número entero   &\PBS\centering Integer.\+parse\+Int("{}15"{}) -\/-\/\texorpdfstring{$>$}{>} 15   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{Solicitud de datos al usuario}{Solicitud de datos al usuario}}\label{md__r_e_a_d_m_e_autotoc_md6}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{Consola}{Consola}}\label{md__r_e_a_d_m_e_autotoc_md7}
+Import necesario\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{import}\ java.util.Scanner;}
+
+\end{DoxyCode}
+ Ejemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Scanner\ scanner\ =\ \textcolor{keyword}{new}\ Scanner(System.in);}
+\DoxyCodeLine{System.out.println(\textcolor{stringliteral}{"{}Digite\ su\ nombre:\ "{}});}
+\DoxyCodeLine{String\ nombre\ =\ scanner.nextLine();}
+
+\end{DoxyCode}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{JOption\+Pane (utilizando una ventana emergente)\+:}{JOption\+Pane (utilizando una ventana emergente)\+:}}\label{md__r_e_a_d_m_e_autotoc_md8}
+Import necesario\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{import}\ javax.swing.JOptionPane;}
+
+\end{DoxyCode}
+ Ejemplo\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{String\ nombre\ =\ JOptionPane.showInputDialog(\textcolor{stringliteral}{"{}Digite\ su\ nombre"{}});}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\texorpdfstring{Manejo de excepciones}{Manejo de excepciones}}\label{md__r_e_a_d_m_e_autotoc_md9}
+Uso de los bloques try\{...\}catch(\+Exception e)\{...\}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ código\ propenso\ a\ fallos}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{catch}\ (Exception\ e)\ }
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ acción\ a\ tomar\ si\ se\ encuentra\ un\ error.}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Ejemplo con dos bloques catch\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ valor\ =\ 0;}
+\DoxyCodeLine{String\ numeroHilera\ =\ \ JOptionPane.showInputDialog\ (“Digite\ un\ número”);}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{\ \ \ valor\ =\ Integer.parseInt\ (numeroHilera);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{catch}\ (NumberFormatException\ e)\{}
+\DoxyCodeLine{\ \ \ System.out.println\ (“El\ valor\ digitado\ no\ es\ un\ número.”);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{catch}\ (Exception\ e)\{}
+\DoxyCodeLine{\ \ \ System.out.println\ (“Ocurrió\ un\ error\ inesperado.”);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Note que se codifica primero el bloque con la excepción más específica {\ttfamily Number\+Format\+Exception} y luego el bloque con la excepción general en este caso.
+
+Conversión a un número\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ convertirStringAInt(String\ valor)\{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{int}\ numero\ =\ 0;}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{\ \ \ \ \ \ numero\ =\ Integer.parseInt(valor);}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{catch}(NumberFormatException\ e)\{}
+\DoxyCodeLine{\ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Ocurrio\ un\ error\ al\ convertir:\ "{}}\ +\ valor);}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ numero;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Ejemplo visto en clase (\doxylink{class_interfaz}{Interfaz}) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ solicitarNumeroReal(String\ mensaje)\{}
+\DoxyCodeLine{\ \ \ \ String\ numeroHilera\ =\ JOptionPane.showInputDialog(mensaje);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ numero\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{\ \ \ \ \ \ numero\ =\ Double.parseDouble(numeroHilera);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{catch}(NumberFormatException\ e)\{}
+\DoxyCodeLine{\ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}Ocurrio\ un\ error\ al\ convertir\ el\ numero:\ "{}}\ +\ e);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ numero;}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{\texorpdfstring{Sobrecarga de métodos y constructores}{Sobrecarga de métodos y constructores}}\label{md__r_e_a_d_m_e_autotoc_md10}
+La firma de un método está compuesta por su nombre y los tipos de datos de los parámetros que recibe (en orden).
+
+La sobrecarga consiste en tener métodos con el mismo nombre pero con distintos parámetros. Java utiliza la cantidad de parámetros, junto con sus tipos para determinar cuál es el método correcto que debe ser invocado.
+
+De igual forma, en Java se pueden sobrecargar los constructores de una clase (permitiendo tener varios). Esto se llama sobrecarga de constructores.
+
+Ejemplos vistos en clase\+:
+
+Sobrecarga de métodos (clase Calculadora\+V2.\+java) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ multiplicar(\textcolor{keywordtype}{double}\ valor1,\ \textcolor{keywordtype}{double}\ valor2)\{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{double}\ resultado\ =\ valor2\ *\ valor1;}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ resultado;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ multiplicar(\textcolor{keywordtype}{int}\ valor1,\ \textcolor{keywordtype}{int}\ valor2)\{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ valor1*valor2;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ multiplicar(\textcolor{keywordtype}{double}\ valor1,\ \textcolor{keywordtype}{int}\ valor2)\{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ valor1*valor2;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ multiplicar(\textcolor{keywordtype}{int}\ valor1,\ \textcolor{keywordtype}{int}\ valor2,\ \textcolor{keywordtype}{int}\ valor3)\{}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ valor1*valor2*valor3;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Sobrecarga de constructores (clase Carta.\+java)
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \mbox{\hyperlink{class_carta}{Carta}}()\ \{}
+\DoxyCodeLine{\ \ \ palo\ =\ \textcolor{stringliteral}{"{}Diamantes"{}};}
+\DoxyCodeLine{\ \ \ numero\ =\ 3;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \mbox{\hyperlink{class_carta}{Carta}}(\textcolor{keywordtype}{int}\ numero,\ String\ palo)\{}
+\DoxyCodeLine{\ \ \ this.numero\ =\ numero;}
+\DoxyCodeLine{\ \ \ this.palo\ =\ palo;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsection{\texorpdfstring{Estructuras de control ({\bfseries{if}}, {\bfseries{if/else}})}{Estructuras de control ({\bfseries{if}}, {\bfseries{if/else}})}}\label{md__r_e_a_d_m_e_autotoc_md11}
+
+\begin{DoxyItemize}
+\item Operadores relacionales (and\+: {\bfseries{\&\&}}, or\+: \+\_\+\+\_\+\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}\+\_\+\+\_\+, xor\+: \+\_\+\+\_\+\texorpdfstring{$^\wedge$}{\string^}\+\_\+\+\_\+, not\+: {\bfseries{!}})
+\item Operadores lógicos ({\bfseries{\texorpdfstring{$>$}{>}}}, {\bfseries{\texorpdfstring{$>$}{>}=}},\+\_\+\+\_\+\texorpdfstring{$<$}{<}{\bfseries{,}}\texorpdfstring{$<$}{<}=\+\_\+\+\_\+,\+\_\+\+\_\+==\+\_\+\+\_\+)
+\item Orden precedencia\+:
+\end{DoxyItemize}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Orden   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tipo   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Operador    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Orden   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Tipo   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Operador    }\\\cline{1-3}
+\endhead
+1   &\PBS\centering Posfijos   &\PBS\centering ( )    \\\cline{1-3}
+2   &\PBS\centering Multiplicativos   &\PBS\centering \texorpdfstring{$\ast$}{*}, /, \%, //    \\\cline{1-3}
+3   &\PBS\centering Aditivos   &\PBS\centering +,-\/    \\\cline{1-3}
+4   &\PBS\centering Unarios   &\PBS\centering x++, x--    \\\cline{1-3}
+5   &\PBS\centering Relacionales   &\PBS\centering \texorpdfstring{$>$}{>}, \texorpdfstring{$<$}{<}, \texorpdfstring{$<$}{<}=, \texorpdfstring{$>$}{>}=    \\\cline{1-3}
+6   &\PBS\centering Igualdad   &\PBS\centering ==    \\\cline{1-3}
+7   &\PBS\centering AND   &\PBS\centering and    \\\cline{1-3}
+8   &\PBS\centering OR   &\PBS\centering or    \\\cline{1-3}
+9   &\PBS\centering Asignación   &\PBS\centering =, +=, -\/=, \texorpdfstring{$\ast$}{*}=, /=,\%= …   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{Estructura if}{Estructura if}}\label{md__r_e_a_d_m_e_autotoc_md12}
+Ejemplo tomado de la clase carta, convierte un número entero que representa una carta en una hilera de caracters con su respectivo valor. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ String\ convertirNumeroCartaIf()\{}
+\DoxyCodeLine{\ \ \ String\ valorCarta\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{if}\ (numero\ ==\ 1)\{}
+\DoxyCodeLine{\ \ \ \ \ \ valorCarta\ =\ \textcolor{stringliteral}{"{}As"{}};}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{if}\ (numero\ ==\ 11)\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ valorCarta\ =\ \textcolor{stringliteral}{"{}J"{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (numero\ ==\ 12)\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ valorCarta\ =\ \textcolor{stringliteral}{"{}Q"{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (numero\ ==\ 13)\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ valorCarta\ =\ \textcolor{stringliteral}{"{}K"{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ valorCarta\ +=\ numero;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ valorCarta;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{Estructura switch}{Estructura switch}}\label{md__r_e_a_d_m_e_autotoc_md13}
+Ejemplo anterior codificado utilizando la estructura switch
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Retorne\ J\ Q\ K\ As\ o\ el\ numero\ como\ String}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ String\ convertirNumeroCarta()\{}
+\DoxyCodeLine{\ \ \ String\ valorCarta\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{switch}(numero)\{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{case}\ 11:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ valorCarta\ =\ \textcolor{stringliteral}{"{}J"{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{case}\ 12:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ valorCarta\ =\ \textcolor{stringliteral}{"{}Q"{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{case}\ 13:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ valorCarta\ =\ \textcolor{stringliteral}{"{}K"{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ valorCarta\ =\ \textcolor{stringliteral}{"{}As"{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ valorCarta\ +=\ this.numero;}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordflow}{return}\ valorCarta;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
