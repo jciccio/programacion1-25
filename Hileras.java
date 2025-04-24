@@ -30,6 +30,43 @@ public class Hileras{
 		StringBuilder sb2 = new StringBuilder(variable2);
 		System.out.println(sb2);
 		sb2.replace(0,1, "Z"); //"Hola" 
-		System.out.println(sb2); //Zola 
+		System.out.println(sb2); //Zola
+
+
+
+		//ESCUELA
+		//??????? -> E
+
+		//E???E??
+
+		String hilera5 = "01234511111";
+
+		System.out.println(hilera5.indexOf("1"));
+		System.out.println(hilera5.substring(0,2));
+
+		String palabraSecreta = "ESCUELA";
+		String palabraSecretaIteracion = palabraSecreta;
+		String patron = "???????";
+
+	/*	int corrimiento = 0;
+		int veces = 0;
+		while(palabraSecretaIteracion.indexOf("E") != -1){
+			veces++;
+			
+			int posicion = palabraSecreta.indexOf("E") + ;
+			patron = patron.substring(0,posicion + corrimiento) + "E" + patron.substring(corrimiento + posicion+1);
+			patron.replace(posicion, posicion+1, "E");
+			System.out.println(patron);
+			palabraSecretaIteracion = palabraSecretaIteracion.substring(posicion+1);
+			corrimiento += palabraSecretaIteracion.indexOf("E")+1;
+		}
+
+		System.out.println("Veces: " + veces);*/
+
+
+		StringBuilder palabra = new StringBuilder("012345");
+		palabra.replace(0,1,"K");
+		System.out.println(palabra);
+		
 	}
 }

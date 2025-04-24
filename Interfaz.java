@@ -23,4 +23,12 @@ public class Interfaz{
 		}
 		return numero;
 	}
+
+	public String solicitarHileraAlUsuario(String mensaje){
+		String valor = JOptionPane.showInputDialog(mensaje);
+		if(valor == null){
+			valor = "";
+		}
+		return valor;
+	}
 }
