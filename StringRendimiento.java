@@ -6,14 +6,14 @@ public class StringRendimiento{
 		
 		SystemInfo info = new SystemInfo();
 		// Estática
-		String x = new String( "Hola");
+		//String x = new String( "Hola");
 		// Dinámica
-		//StringBuilder x =new StringBuilder("Hola");
+		StringBuilder x =new StringBuilder("Hola");
 
 		Instant tiempoInicial = Instant.now();
 		for(int i = 0; i < 1000000; i++){
-			x += "hola";
-			//x.append("hola");
+			//x += "hola";
+			x.append("hola");
 		}
 		Instant tiempoFinal = Instant.now();
 		long tiempoTranscurrido = Duration.between(tiempoInicial,tiempoFinal).toMillis();

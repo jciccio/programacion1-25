@@ -1,66 +1,67 @@
+import javax.swing.*;
 public class Ahorcado{
 	private String palabraSecreta ;
-	private StringBuilder palabraDescubierta;
+	private StringBuilder palabraUsuario;
 	private int intentosRestantes;
 
 	public Ahorcado(String palabraSecreta){
 		this.intentosRestantes = 7;
 		this.palabraSecreta = palabraSecreta.toUpperCase();
-		this.palabraDescubierta = new StringBuilder();
+		this.palabraUsuario = new StringBuilder();
 		for(int i = 0 ; i < palabraSecreta.length(); i++){
-			palabraDescubierta.append("?");
+			palabraUsuario.append("?");
 		}
 	}
 
 	public String toString(){
 		String datos= "intentos restantes: " + intentosRestantes + "\npalabra secreta: " + palabraSecreta +
-		"\npalabra adivinada: " + palabraDescubierta+ "\n------\n";
+		"\npalabra adivinada: " + palabraUsuario+ "\n------\n";
 		return datos;
 	}
 
 	private boolean gano(){
-		return palabraDescubierta.toString().indexOf("?") == -1;
+		return palabraUsuario.toString().indexOf("?") == -1;
 	}
 
 	private boolean buscarLetra(String hilera){
+		// como buscamos una letra en el patron??
+		// escuela => 
+		// palabraSecreta.indexOf(hilera) // -1 > 
 		boolean encontrado = false;
 		String copiaPalabra = palabraSecreta;
-		int posicion = palabraSecreta.indexOf(hilera);
+		int posicion = copiaPalabra.indexOf(hilera);
 		int ultimaPosicion = 0;
-		while(posicion != -1){
-			int nuevaPosicion = ultimaPosicion + posicion;
-			palabraDescubierta.replace(nuevaPosicion, nuevaPosicion+hilera.length(), hilera);
-			copiaPalabra = copiaPalabra.substring(posicion + hilera.length());
-			ultimaPosicion += posicion + hilera.length(); 
-			posicion = palabraSecreta.indexOf(hilera);
+		while (posicion != -1){
+			int nuevaPosicion = ultimaPosicion + posicion; 
+			palabraUsuario.replace(
+				nuevaPosicion, nuevaPosicion +hilera.length(), hilera);
+			copiaPalabra = copiaPalabra.substring(posicion+hilera.length());
+			ultimaPosicion += posicion+hilera.length();
+			posicion = copiaPalabra.indexOf(hilera);
 			encontrado = true;
 		}
 		return encontrado;
-		/*for(int i = 0 ;i < palabraSecreta.length(); i++){
-			if(palabraSecreta.charAt(i) == hilera.charAt(0)){
-				palabraDescubierta.replace(i, i+1, hilera.chartAt(0));
-			}
-		}*/
 	}
 
 	public void jugar(){
-		Interfaz interfaz = new Interfaz();
+		// Mientras tenga intentos
+		// Pedirle al usuario un valor
+		// Vamos a ver si el valor se encuentra
+		// Si se encuentra se modifica la palabra secreta
+		// Si no se encuentra, se resta 1 a los intentos
 		do{
-			// Pedir una letra
-			String letraUsuario = interfaz.solicitarHileraAlUsuario();
-			// Buscar si la letra está
-			boolean estaLaLetra = buscarLetra(letraUsuario);
-			// Si la letra se encuentra, entonces cambiamos la palabra descubierta
-			if(!estaLaLetra){// Si la letra no está, entonces restamos un intento
-				intentosRestantes --;
+			String letras = JOptionPane.showInputDialog(toString() + "\nDigite una letra(s):");
+			boolean letraEncontrada = buscarLetra(letras.toUpperCase());
+			if(!letraEncontrada){
+				intentosRestantes--;
 			}
-		}while(!gano() && intentosRestantes > 0);
-		
+		}while(intentosRestantes > 0 && !gano());
+
 		if(gano()){
-			System.out.println("Gano :)");
+			JOptionPane.showMessageDialog(null, "Felicidades, ganó! :)");
 		}
 		else{
-			System.out.println("Perdio :(");
+			JOptionPane.showMessageDialog(null, "Perdió :(");
 		}
 	}
 
@@ -73,6 +74,8 @@ public class Ahorcado{
 	public static void main (String [] args){
 		Ahorcado ahorcado = new Ahorcado ("PARALELEPIPEDO");
 		System.out.println(ahorcado);
+
+		ahorcado.jugar();
 
 		Ahorcado ahorcado2 = new Ahorcado ("ESCUELA");
 		System.out.println(ahorcado2);
