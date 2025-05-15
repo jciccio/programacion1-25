@@ -110,13 +110,18 @@ public class Matrices{
 
 
 	public static void main (String [] args){
+
+		Matrices matrizInstancia = new Matrices();
+		
+
+
 		/*int [][] matrizNumeros = new int [5][10]; 
 
 		matrizNumeros[2][1] = 6;
 		matrizNumeros[3][1] = 61;
 		matrizNumeros[2][4] = 60;
 		System.out.println("matrizNumeros[2][4] = " + matrizNumeros[2][4]);
-		Matrices matrizInstancia = new Matrices();
+		
 		matrizInstancia.imprimir(matrizNumeros);
 		matrizInstancia.imprimir(matrizInstancia.crearMatriz(5,10,5));
 
