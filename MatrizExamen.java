@@ -13,7 +13,7 @@ public class MatrizExamen{
 			for(int i = 0; i < cF.length; i++){				
 				int nuevaFila = filaAleatoria + cF[i];
 				int nuevaCol  = colAleatoria + cC[i];
-				if(nuevaFila >= 0 && nuevaFila < tablero.length && nuevaCol >= 0 && nuevaCol < tablero[0].length){
+				if(nuevaFila >= 0 && nuevaFila < comida.length && nuevaCol >= 0 && nuevaCol < comida[0].length){
 					suma += comida[nuevaFila][nuevaCol];
 				}
 			}
