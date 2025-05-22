@@ -46,7 +46,7 @@ public class Laberinto {
         coordF >= 0 && coordC >=0){
 
       if (laberinto[coordF][coordC] == ' ' || 
-          laberinto[coordF][coordC] == 'R'){// Marque el camino
+          laberinto[coordF][coordC] == 'R'){ // Marque el camino
         
         if( laberinto[coordF][coordC] == 'R'){
           laberinto[coordF][coordC] = 'r';
