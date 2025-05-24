@@ -3,7 +3,7 @@ public class AlgoritmosOrdenamiento{
 
 	public int[] clonar(int [] arreglo){
 		int [] copia = new int [arreglo.length];
-		for(int = 0; i < arreglo.length; i++){
+		for(int i = 0; i < arreglo.length; i++){
 			copia[i] = arreglo[i];
 		}
 		return copia;
@@ -30,20 +30,22 @@ public class AlgoritmosOrdenamiento{
 		for(int i = 1; i < arreglo.length; i++){
 			int temporal = arreglo[i];
 			int contador = i - 1;
-			while(contador >= 0 && arreglo[i] > temporal){
+			while(contador >= 0 && arreglo[contador] > temporal){
 				arreglo[contador + 1] = arreglo[contador];
 				contador--;
 			}
 			arreglo [contador + 1] = temporal;
 		}
 		return arreglo;
+
+
 	}
 
 	public int[] ordenarSeleccion (int [] entrada){
 		int [] arreglo = clonar(entrada);
 		for(int i = 0; i < arreglo.length - 1 ; i++){
 			for(int j = i+1; j < arreglo.length; j++){
-				if(arreglo[i] < arreglo[j]){
+				if(arreglo[i] > arreglo[j]){
 					int temporal = arreglo[i];
 					arreglo[i] = arreglo[j];
 					arreglo[j] = temporal;
@@ -62,10 +64,16 @@ public class AlgoritmosOrdenamiento{
 
 
 	public static void main (String [] args){
-		int [] x = {10,5,20,6,8,3,7,1,0,1,1,1,1,1,20,20};
+		int [] x = {10,5,20,6,8,3,7,1,0,1,-1,1,1,1,20,20};
 		AlgoritmosOrdenamiento ao = new AlgoritmosOrdenamiento();
-		ao.ordenarSeleccion(x);
-		ao.imprimir(x);
+		int [] arregloSeleccion = ao.ordenarSeleccion(x);
+		ao.imprimir(arregloSeleccion);
+
+		int [] arregloBurbuja = ao.ordenarBurbuja(x);
+		ao.imprimir(arregloBurbuja);
+
+		int [] arregloInsercion = ao.ordenarInsercion(x);
+		ao.imprimir(arregloInsercion);
 	}
 
 
