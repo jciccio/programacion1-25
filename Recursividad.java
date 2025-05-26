@@ -48,7 +48,7 @@ public class Recursividad{
 		 for(int i = 0 ; i< numerosFibonacci.length; i++){
 		 	numerosFibonacci[i] = -1;
 		 }
-		 calcularFibonacciOptimizado(n, numerosFibonacci);
+		 return calcularFibonacciOptimizado(n, numerosFibonacci);
 	}
 
 	private int calcularFibonacciOptimizado(int n, int [] valores){
@@ -72,9 +72,23 @@ public class Recursividad{
 		return resultado;
 	}
 
+	public void calcularHanoi(int n, int origen, int intermedio, int destino){
+		if(n == 1){
+			System.out.println("Mover el disco " + n + " desde "+ origen + " hasta " + destino);
+		}
+		else {
+			calcularHanoi(n-1, origen, destino , intermedio);
+			System.out.println("Mover el disco " + n + " desde "+ origen + " hasta " + destino);
+			calcularHanoi(n-1, intermedio, origen, destino);
+		}
+
+	}
+
 	public static void main (String args[]){
 		Recursividad recursividad = new Recursividad();
 		System.out.println("La sumatoria de 5: " + recursividad.calcularSumatoria(5));
 		System.out.println("La sumatoria de 10: " + recursividad.calcularSumatoria(10));
+
+		recursividad.calcularHanoi(10,1,2,3);
 	}
 }

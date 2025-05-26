@@ -37,8 +37,6 @@ public class AlgoritmosOrdenamiento{
 			arreglo [contador + 1] = temporal;
 		}
 		return arreglo;
-
-
 	}
 
 	public int[] ordenarSeleccion (int [] entrada){
