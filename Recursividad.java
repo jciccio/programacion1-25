@@ -13,6 +13,16 @@ public class Recursividad{
 		return resultado;
 	}
 
+	public double sumarArreglo(double [] arreglo, int i){
+		double resultado = 0;
+		if(arreglo != null){
+			if(i < arreglo.length){
+				resultado = arreglo[i] + sumarArreglo(arreglo, i+1);		
+			}
+		}
+		return resultado;
+	}
+
 	// Factorial
 	// 5! 5*4*3*2*1
 	public int calcularFactorial(int n){

@@ -86,6 +86,43 @@ public class ListaSimplementeEnlazada{
 		return insertado;
 	}
 
+	public boolean borrar(int posicion){
+		// Casos para borrar un elemento
+		// Si es el primer nodo (nodo inicial = 0) -> tenemos que actualizar el puntero al inicio
+		// Si es intermedio -> queremos buscar anterior 
+		// Si es el final -> tener cuidado con la ref al siguiente.
+		boolean borrado = false;
+		if(posicion >= 0 && primero != null){
+			if(posicion == 0){ // Es el primer elemento
+				Nodo temporal = this.primero;
+				primero = primero.siguiente;
+				temporal.siguiente = null;
+				temporal = null;
+				borrado = true;
+			}
+			else{
+				Nodo anterior = buscarAnterior(posicion);
+				if(anterior != null){
+					Nodo borrar = anterior.siguiente;
+					if(borrar == null || borrar.siguiente == null){
+						// Nodo final
+						anterior.siguiente =null;
+						anterior = null;
+						borrado = true;
+					}
+					else{
+						// Nodo intermedio
+						anterior.siguiente = borrar.siguiente;
+						borrar.siguiente = null;
+						borrar = null;
+						borrado = true;
+					}
+				}
+			}
+		}
+		return borrado;
+	}
+
 	public String toString(){
 		String contenido = "";
 		Nodo actual = primero;
