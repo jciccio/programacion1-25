@@ -132,6 +132,40 @@ public class ArbolBinario{
 		return buscado;
 	}
 
+	public int getProfundidad(){
+		return getProfundidad(this.raiz);
+	}
+
+	private int getProfundidad(Nodo nodo){
+		int profundidadIzq, profundidadDer = 0;
+		if(nodo != null){
+			if(nodo.hijoIzq != null)
+				profundidadIzq = getProfundidad(nodo.hijoIzq);
+			if(nodo.hijoDer != null)
+				profundidadDer = getProfundidad(nodo.hijoDer);
+		}
+		return (profundidadIzq > profundidadDer ? profundidadIzq : profundidadDer) + 1;
+	}
+
+	private int getLength(Nodo nodo){
+		int contador = 0;
+		if(nodo != null){
+			contador += getLength(nodo.hijoIzq);
+			contador += getLength(nodo.hijoDer);
+			contador++;
+		}
+		return contador;
+	}
+
+	private int getLength2(Nodo nodo, int contador){
+		if(nodo != null){
+			contador = getLength2(nodo.hijoIzq, contador);
+			contador = getLength2(nodo.hijoDer, contador + 1);
+		}
+		return contador;
+	}
+
+	
 	public static void main (String [] args){
 		ArbolBinario ab = new ArbolBinario();
 		ab.insertar(15);
@@ -148,7 +182,8 @@ public class ArbolBinario{
 		ab.imprimir();
 
 
-		ab.borrar(7);
-		ab.imprimir();
+
+		//ab.borrar(7);
+		//ab.imprimir();
 	}
 }

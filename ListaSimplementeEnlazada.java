@@ -133,6 +133,15 @@ public class ListaSimplementeEnlazada{
 		return contenido;
 	}
 
+	public void imprimirRecursivo(Nodo nodo){
+		if(nodo != null){
+			imprimirRecursivo(nodo.siguiente);
+			System.out.println(nodo);
+		}
+	}
+
+
+
 	public Nodo getElemento(int posicion){
 		return buscarPosicion(posicion);
 	}
