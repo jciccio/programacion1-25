@@ -128,5 +128,16 @@ public class Carta{
 		System.out.println( convertirNumeroIf() + " de " + palo);
 	}
 
+
+	public String toString(){
+		return convertirNumero() + " de " + palo;
+	}
+
+
+	public static void main (String [] args){
+		Carta carta1 = new Carta();
+		System.out.println(carta1);
+	}
+
 	
 }
