@@ -12,9 +12,7 @@ public class IOBinario{
 		}catch(IOException e){
 			System.err.println("Ocurrio un error al escribir el archivo: " + e);
 		}
-		/*catch(ClassNotFoundException e){
-			System.err.println("No se encontro la clase a serializar: " + e);
-		}*/
+
 	}
 
 
