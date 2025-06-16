@@ -1,3 +1,4 @@
+import java.io.Serializable;
 /*
 
 Carta
@@ -12,7 +13,7 @@ Carta
 
 // 1..13 => 11 -> J 12-> Q 13 -> K 1-> As
 
-public class Carta{
+public class Carta implements Serializable{
 	private int numero;
 	private String palo;
 
