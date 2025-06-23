@@ -14,6 +14,22 @@ public class TablaExplosiva{
 		}
 	}
 
+	public void explotar(int f, int c){
+		if(f >= 0 && f < matriz.length && c >= 0 && c < matriz[f].length){
+			if(matriz[f][c] == 'N'){ // Caso trivial
+				matriz[f][c] = 'R';
+			}
+			else if(matriz[f][c] == 'E'){
+				int movF = {-1,1,0,0};
+				int movC = {0,0,-1,1};
+				matriz[f][c] = 'R';
+				for(int i = 0 ; i < movF.length;i++){
+					explotar(f+movF[i], c+movC[i]);
+				}
+			}
+		}
+	}
+
 	public String toString(){
 		String contenido = "";
 		if(matriz != null){
